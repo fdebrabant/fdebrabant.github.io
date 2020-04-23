@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap'); 
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #E9E9E9;
+    font-size: 14px;
+    line-height: 99.6%;
+    color: #646464;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.topbar {
+    background: #6F4978;
+    text-align: center;
+    padding-bottom: 21px;
+}
+
+.topbar a {
+    text-decoration: none;
+    color: #C9C9C9;
+    letter-spacing: 0.1rem;
+    padding: 0 15px;
+    transition: color .3s;
+    line-height: 2;
+}
+
+.logo {
+    display: block;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 27px;
+}
+
+.logo img {
+    width: 70px;
+}
+
+
+.topbar a:hover {
+    color: white;
+}
+
+.container {
+    padding: 0 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.site {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar {
+    font-size: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    display: block;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.2);
+    padding: 0.6em 0;
+    transition: .3s;
+    width: 50%;
+    border: solid 1px transparent;
+    padding-left: 10px;
+}
+
+.sidebar a::before {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-top: -10px;
+    margin-right: 20px;
+    background: url(img/home.svg) center center / contain no-repeat;
+    opacity: .2;
+    transition: opacity .3s;
+}
+
+.sidebar .sidebar-messages::before {
+    background: url(img/msg.svg) center center / contain no-repeat;
+}
+
+.sidebar .sidebar-amis::before {
+    background: url(img/friend.svg) center center / contain no-repeat;
+}
+
+.sidebar .sidebar-evenement::before {
+    background: url(img/calendar.svg) center center / contain no-repeat;
+}
+
+.sidebar .sidebar-friend-group::before {
+    background: url(img/friendgroup.svg) center center / contain no-repeat;
+}
+
+.sidebar a:hover, .sidebar a.active {
+    color: black;
+    border: solid 1px #6F4978;
+    border-radius: 3px;
+    background: white;
+}
+
+.sidebar a:hover::before, .sidebar a.active::before {
+    opacity: 1;
+}
+
+.card {
+    border: solid 1px #6F4978;
+    border-radius: 3px;
+    background: white;
+    margin-bottom: 10px;
+}
+
+.card-header {
+    position: relative;
+    padding: 10px;
+}
+
+.card-header-avatar {
+    padding-left: 70px;
+}
+
+.card-avatar {
+    position: absolute;
+    left: 10px;
+    border-radius: 25px;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+.card-pseudo {
+    color: black;
+    letter-spacing: 0.005em;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.card-pseudo::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 3%;
+    margin-top: 4px;
+    background: black;
+}
+
+.card-time {
+    font-size: 12px;
+    letter-spacing: 0.005em;
+    color: #C9C9C9;
+}
+
+.card-body {
+    padding: 0 10px ;
+}
+
+.card-body .fullwidth {
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    margin-right: -10px;
+    display: block;
+}
+
+.card-body p:first-child {
+    margin-top: 0;
+}
+
+.card-footer {
+    border-top: solid 1px #6F4978;
+    display: flex;
+    padding: 10px;
+    font-size: 12px;
+    color: #C9C9C9
+}
+
+.card-like::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    width: 18px;
+    height: 17px;
+    background: url(img/Ei-like.svg) center center / 18px 17px no-repeat;
+}
+
+.card-comment::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    width: 17px;
+    height: 17px;
+    background: url(img/comment-img.svg) center center / 18px 18px no-repeat;
+}
+
+.card-comment {
+    margin-left: auto;
+}
+
+.card-profile {
+    margin-top: 85px;
+    border: solid 1px #6F4978;
+    border-radius: 3px;
+    background: white;
+    margin-bottom: 10px;
+}
+
+.profile-img {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    margin-top: -75px;
+}
+
+.profile-img img {
+    border-radius: 50%;
+}
+.profile-header {
+    text-align: center;
+}
+
+.profile-title {
+    position: relative;
+    color: black;
+    letter-spacing: 0.005em;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.profile-title::after {
+    content: '';
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 1px;
+    width: 3%;
+    margin-top: 4px;
+    background: black;
+}
+
+.profile-time  {
+    margin-top: 5px;
+    font-size: 12px;
+    letter-spacing: 0.005em;
+    color: #C9C9C9;
+    
+}
+
+.profile-body {
+    padding: 0 10px;
+}
+
+.sidebar-title {
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.sidebar-title::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: black;
+}
+
+.friend-list {
+  width: 270px;
+  margin: auto;
+}
+
+.friend {
+    margin: 20px 0;
+    display: flex;
+}
+
+.friend-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.friend-avatar {
+    flex: none;
+    margin-right: 20px;
+}
+
+.friend-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    display: block;
+    margin-top: 20px;
+}
+
+.friend-connection {
+    font-size: 14px;
+    color: #C9C9C9;
+    margin-top: 5px;
+}
+
+.friend-add {
+    display: block;
+    font-size: 18px;
+    color: #C9C9C9;
+    margin-top: auto;
+}
+
+.friend-add::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    background: url(img/friendgroup.svg) center center / 20px 20px no-repeat;
+    opacity: 0.41;
+}
+
+@media only screen and (min-width: 470px) {
+
+    .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 49px;
+        padding: 0 15px;
+    }
+
+    .logo, .topbar {
+        padding: 0;
+    }
+
+    .logo img {
+        width: 40px;
+        margin-top: 6px;
+        margin-left: 20px;        
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+
+    .site {
+        display: flex;
+    }
+
+    .sidebar {
+        width: 215px;
+        flex: none;
+        display: block;
+    }
+
+    .sidebar a {
+        width: 100%;
+    }
+
+    .aside {
+        width: 510px;
+        flex: none;
+    }
+
+    .card-profile {
+        margin-top: 75px;
+    }
+
+    .main {
+        width: 100%;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+}
