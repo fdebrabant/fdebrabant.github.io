@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+body {
+    background: url('https://images.pexels.com/photos/251603/pexels-photo-251603.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center fixed;;
+    background-size: cover;
+}
+
+.header {
+    margin: 10px 0;
+}
+
+.header-img {
+    border-radius: 50%;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000000c9;
+}
+
+.header-banniere {
+   border-radius: 10px;
+   background-color: #ffc107;;
+   position: relative;
+   max-width: 500px;
+   margin: -20px auto 0 auto;
+   border: 1px solid #00000082;
+}
+
+.header-title {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: .25rem;
+}
+
+.jingle {
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.button-react-max-width {
+    max-width: 235px;
+}
+
+.hr-separator {
+    background-color: grey;
+    max-width: 500px;
+}
+
+.ranking-buttons div button {
+    max-width: 164px;
+    width: 100%;
+}
+
+.first {
+    padding-top: 100px;
+}
+
+.second {
+    padding-top: 50px;
+    margin-top: 50px;
+}
+
+.third {
+    padding-top: 10px;
+    margin-top: 90px;
+}
+
+@media only screen and (max-width: 575px) {
+    .ranking-buttons {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .ranking-buttons {
+        display: block;
+        text-align: center;
+    }
+    .ranking-buttons div {
+        padding: 0;
+    }
+    .ranking-buttons div button {
+        width: 164px;
+    }
+}
